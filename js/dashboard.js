@@ -33,7 +33,7 @@ async function loadTasks() {
     loader.style.display = "block";   // show spinner
 
     const status = document.getElementById("statusFilter").value;
-    let url = "http://localhost:5000/api/tasks";
+    let url = "http://taskmanager-backend-i6lw.onrender.com/api/tasks";
 
     if (status) url += `?status=${status}`;
 
@@ -103,7 +103,7 @@ document.getElementById("addTaskBtn").addEventListener("click", async () => {
         return;
     }
 
-    const response = await fetch("http://localhost:5000/api/tasks", {
+    const response = await fetch("http://taskmanager-backend-i6lw.onrender.com/api/tasks", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -125,7 +125,7 @@ document.getElementById("statusFilter").addEventListener("change", loadTasks);
 
 // Delete a task
 async function deleteTask(id) {
-    await fetch(`http://localhost:5000/api/tasks/${id}`, {
+    await fetch(`http://taskmanager-backend-i6lw.onrender.com/api/tasks/${id}`, {
         method: "DELETE",
         headers: {
             Authorization: "Bearer " + token
@@ -163,7 +163,7 @@ document.getElementById("saveEditBtn").addEventListener("click", async () => {
         status: editStatus.value
     };
 
-    const response = await fetch(`http://localhost:5000/api/tasks/${editTaskId}`, {
+    const response = await fetch(`http://taskmanager-backend-i6lw.onrender.com/api/tasks/${editTaskId}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
