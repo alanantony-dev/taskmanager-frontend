@@ -1,66 +1,53 @@
-Task Manager API (Node.js + Express + MongoDB)
+Task Manager Frontend (HTML + CSS + JavaScript)
 
-A simple and secure Task Manager REST API built using Node.js, Express, MongoDB, and JWT authentication.
-This API allows users to sign up, log in, and manage tasks (CRUD operations).
+A fully functional frontend interface for the Task Manager application.
+Users can sign up, log in, view tasks, create tasks, edit tasks, and delete tasks.
 
-🚀 Live API Base URL
-https://taskmanager-backend-i6lw.onrender.com
 
-📌 Features
-User Signup & Login (JWT Authentication)
-Create Tasks
-Read Tasks (User-specific)
-Update Tasks
-Delete Tasks
-MongoDB Atlas Integration
-Secure Password Hashing (bcrypt)
+
+The frontend communicates with the backend via Fetch API.
+🌐 Live Website
+https://taskmanager-frontend-red.vercel.app
+
+🎯 Features
+User Signup & Login
+JWT stored in localStorage
+Dashboard shows all tasks
+Add new tasks
+Edit existing tasks
+Delete tasks
+Real-time updates via API calls
+Simple and clean UI
 
 🛠️ Tech Stack
-Node.js
-Express.js
-MongoDB Atlas
-Mongoose
-JSON Web Token (JWT)
-bcryptjs
-Render (Deployment)
+HTML5
+CSS3
+Vanilla JavaScript
+Fetch API
+Vercel (Deployment)
 
-API endpoints
-Auth
-| Method | Endpoint           | Description           |
-| ------ | ------------------ | --------------------- |
-| POST   | `/api/auth/signup` | Register a new user   |
-| POST   | `/api/auth/login`  | Login & get JWT token |
-
-Tasks
-| Method | Endpoint         | Description       |
-| ------ | ---------------- | ----------------- |
-| GET    | `/api/tasks`     | Get all tasks     |
-| POST   | `/api/tasks`     | Create a new task |
-| PUT    | `/api/tasks/:id` | Update a task     |
-| DELETE | `/api/tasks/:id` | Delete a task     |
-
-🔐 Environment Variables
-create a .env file
-MONGO_URI=your_mongo_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5000
+🔗 Backend API
+The app interacts with:
+https://taskmanager-backend-i6lw.onrender.com/api
 
 ▶️ Run Locally
-npm install
-npm run dev
+open index.html using live server
 
-API runs at:
-http://localhost:5000
 
 📁Project Structure
-src/
- ├── controllers/
- ├── routes/
- ├── models/
- ├── middlewares/
- ├── config/
-server.js
+index.html
+signup.html
+dashboard.html
+css/
+js/
+  ├── login.js
+  ├── signup.js
+  ├── dashboard.js
 
-🌐 Deployment
-Backend hosted on Render (free tier).
+
+
+🚀 Deployment
+Frontend hosted on Vercel.
 Auto-deploys on every git push.
+
+
