@@ -12,7 +12,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
     successMsg.textContent = "";
 
     try {
-        const response = await fetch("http://taskmanager-backend-i6lw.onrender.com/api/auth/signup", {
+        const response = await fetch("https://taskmanager-backend-i6lw.onrender.com/api/auth/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

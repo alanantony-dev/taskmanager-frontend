@@ -8,7 +8,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     errorMsg.textContent = "";
 
     try {
-        const response = await fetch("http://taskmanager-backend-i6lw.onrender.com/api/auth/login", {
+        const response = await fetch("https://taskmanager-backend-i6lw.onrender.com/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
